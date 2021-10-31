@@ -168,3 +168,35 @@ Tempo de Resposta: 02 segundos.
 
 
 ________________________________________________________________________________________________________________________________________________________________________________
+
+
+
+Teste 06 :
+
+
+Tipo do Teste: Funcional
+
+
+Subtipo de Teste: Requisito
+
+
+Objetivo do Teste: Testar se é possível avaliar o médico.
+
+
+Requisitos que motivaram este teste: RF-006 Deverá ter um campo de avaliação do profissional prestador de serviços
+
+
+Passos: 
+•	Clicar em histórico do paciente
+•	Clicar no médico da consulta anterior
+•	Clicar em comentários e avaliações
+
+
+Resultado Esperado: Conseguir comentar a avaliação do médico no campo de observações do profissional.
+
+
+Tempo de Resposta: 02 segundos.
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
