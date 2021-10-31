@@ -103,6 +103,8 @@ Os requisitos descrevem as funcionalidades do sistema, citados na tabela a segui
 |RNF-006| Não salva em caso de login semelhante.| MÉDIA|
 |RNF-007| O sistema deve possuir níveis de acesso para diferenciar usuários comuns de usuários administrativos, que acessarão áreas distintas do sistema| ALTA|
 |RNF-008| O sistema de compra deve ser negável sem a necessidade de uma prévia autenticação do usuário| MÉDIA|
+|RNF-009|	O sistema deverá ser intuitivo e de fácil utilização	|ALTA|
+|RNF-010|	O sistema deverá estar disponível para acesso 24h por dia	|MÉDIA|
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
