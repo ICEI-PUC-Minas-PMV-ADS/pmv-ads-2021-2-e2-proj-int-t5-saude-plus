@@ -1,6 +1,8 @@
 # Plano de Testes de Software
 
 Teste 01 :
+
+
 Tipo do Teste: Funcional
 
 
@@ -33,17 +35,37 @@ ________________________________________________________________________________
 
 
 
+Teste 02 :
 
 
-Teste 07 :
 Tipo do Teste: Funcional
-Subtipo de Teste: Requisito
-Objetivo do Teste: Testar se a funcionalidade de compras de moedas está funcionando para o usuário.
-Requisitos que motivaram este teste: RF-007 Deverá ter pacotes de moedas para o paciente realizar a compra para desbloquear a consulta com pagamento em cartão.
-Passos: 
-•	Clicar na página para agendamento de consultas
-•	Mostrar pacote de moedas disponível
-•	Clicar em selecionar forma de pagamento
 
-Resultado Esperado: Conseguir comprar o pacote de moedas
-Tempo de Resposta: 04 segundos.
+
+Subtipo de Teste: Requisito
+
+
+Objetivo do Teste: Testar a funcionalidade do campo de cadastro do usuário
+
+
+Requisitos que motivaram este teste: RF001 Deverá ter um campo de cadastro de usuário por e-mail ou CPF.
+
+
+Passos: 
+•	Acessar o site
+•	Clicar em cadastro de usuário
+
+
+
+
+Resultado Esperado: Abrir o campo de cadastro com o formulário para ser preenchido.
+
+
+Tempo de Resposta: 02 segundos.
+
+
+
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
+
