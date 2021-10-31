@@ -138,3 +138,33 @@ Tempo de Resposta: 01 segundos.
 
 ________________________________________________________________________________________________________________________________________________________________________________
 
+
+
+
+Teste 05 :
+
+
+Tipo do Teste: Funcional
+
+
+Subtipo de Teste: Requisito
+
+
+Objetivo do Teste: Testar a funcionalidade da página de gerar o histórico do paciente.
+
+
+Requisitos que motivaram este teste: RF-005 Deverá ter uma página de acesso ao prontuário do paciente
+
+
+Passos: 
+•	Clicar na página do paciente
+•	Clicar em histórico do paciente
+
+
+Resultado Esperado: Abrir todo o histórico do paciente.
+
+
+Tempo de Resposta: 02 segundos.
+
+
+________________________________________________________________________________________________________________________________________________________________________________
