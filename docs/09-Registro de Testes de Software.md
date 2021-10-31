@@ -7,6 +7,7 @@ Relatório com as evidências dos testes de software realizados no sistema pela 
 ## Avaliação
 
 Registro de Teste 01
+
 Tipo do Teste: Funcional
 
 
