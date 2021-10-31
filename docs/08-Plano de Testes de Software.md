@@ -69,3 +69,39 @@ Tempo de Resposta: 02 segundos.
 
 ________________________________________________________________________________________________________________________________________________________________________________
 
+
+
+
+
+
+Teste 03 :
+
+
+Tipo do Teste: Funcional
+
+
+Subtipo de Teste: Requisito
+
+
+Objetivo do Teste: Verificar a validação do QR CODE
+
+
+Requisitos que motivaram este teste: RF-002 Deverá conter um QR CODE para direcionar os pacientes ao whatsapp do médico.
+
+
+Passos: 
+•	Clicar no painel de acesso ao médico
+•	Acessar o QR CODE
+•	Abrir o whatsapp e enviar uma mensagem de confirmação de consulta
+
+
+
+
+Resultado Esperado: Envio da mensagem no whatsapp do médico.
+
+
+Tempo de Resposta: 05 segundos.
+
+
+
+________________________________________________________________________________________________________________________________________________________________________________
