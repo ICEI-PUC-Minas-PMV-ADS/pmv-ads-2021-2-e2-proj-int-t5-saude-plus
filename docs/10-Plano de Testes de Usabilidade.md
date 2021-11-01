@@ -73,19 +73,4 @@ Requisitos que motivaram este teste: RNF-009	O sistema deverá ser intuitivo e d
 
 
 
-________________________________________________________________________________________________________________________________________________________________________________
 
-
-Teste 05 :
-
-
-Tipo do Teste: Não funcional
-
-
-Subtipo de Teste: Usabilidade
-
-
-Objetivo do Teste: Testar se o sistema fica disponibilizado para o usuário 24 horas por dia. 
-
-
-Requisitos que motivaram este teste: RNF-010	O sistema deverá estar disponível para acesso 24h por dia
