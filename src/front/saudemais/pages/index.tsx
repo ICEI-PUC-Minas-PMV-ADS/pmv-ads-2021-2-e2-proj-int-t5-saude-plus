@@ -35,7 +35,16 @@ function Form() {
   });
 
   const mutation = useMutation(() => {
-    return axios.post("http://localhost:5000/api/cadastro", form);
+    return axios.post(
+      "http://localhost:5000/api/cadastro",
+      JSON.stringify(form),
+      {
+        headers: {
+          "Access-Control-Allow-Origin": "*",
+          "Content-Type": "application/json; charset=utf-8",
+        },
+      }
+    );
   });
 
   console.log(mutation.error);
