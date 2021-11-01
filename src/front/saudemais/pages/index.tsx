@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
@@ -8,6 +8,22 @@ import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import { useMutation } from "react-query";
 import axios from "axios";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import Box from "@mui/material/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+
+const style = {
+  position: "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 4,
+};
 
 interface IForm {
   PrimeiroNome: string;
@@ -22,6 +38,9 @@ interface IForm {
 }
 
 function Form() {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   const [form, setForm] = useState<IForm>({
     PrimeiroNome: "",
     Sobrenome: "",
@@ -33,7 +52,6 @@ function Form() {
     Email: "",
     Senha: "",
   });
-
   const mutation = useMutation(() => {
     return axios.post(
       "http://localhost:5000/api/cadastro",
@@ -47,10 +65,32 @@ function Form() {
     );
   });
 
-  console.log(mutation.error);
-
   return (
     <div>
+      {mutation.isLoading && (
+        <div>
+          <Modal
+            open={true}
+            aria-labelledby="modal-modal-title"
+            aria-describedby="modal-modal-description"
+          >
+            <Box
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                bgcolor: "background.paper",
+                border: "2px solid #000",
+                boxShadow: 24,
+                p: 4,
+              }}
+            >
+              <CircularProgress />
+            </Box>
+          </Modal>
+        </div>
+      )}
       <div style={{ display: "flex", flexDirection: "row", marginTop: 40 }}>
         <div
           style={{ display: "flex", flexDirection: "column", marginRight: 80 }}
@@ -152,6 +192,17 @@ function Form() {
         <Button
           onClick={() => {
             mutation.mutate();
+            setForm({
+              PrimeiroNome: "",
+              Sobrenome: "",
+              Telefone: "",
+              CPF: "",
+              Genero: "",
+              CRM: "",
+              AreaAtuacao: "",
+              Email: "",
+              Senha: "",
+            });
           }}
           variant="contained"
           style={{
