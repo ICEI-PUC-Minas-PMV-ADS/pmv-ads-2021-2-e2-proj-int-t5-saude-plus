@@ -34,71 +34,126 @@ function Form() {
     Senha: "",
   });
 
+  const mutation = useMutation(() => {
+    return axios.post("http://localhost:5000/api/cadastro", form);
+  });
+
+  console.log(mutation.error);
+
   return (
-    <div style={{ display: "flex", flexDirection: "row", marginTop: 40 }}>
-      <div
-        style={{ display: "flex", flexDirection: "column", marginRight: 80 }}
-      >
-        <TextField
-          id="outlined-basic"
-          label="Primeiro nome"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Telefone"
-          variant="outlined"
-          style={{ marginTop: 24, width: 260 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Gênero"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="CRM"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Email"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
+    <div>
+      <div style={{ display: "flex", flexDirection: "row", marginTop: 40 }}>
+        <div
+          style={{ display: "flex", flexDirection: "column", marginRight: 80 }}
+        >
+          <TextField
+            value={form.PrimeiroNome}
+            onChange={(event) => {
+              setForm({ ...form, PrimeiroNome: event.currentTarget.value });
+            }}
+            id="outlined-basic"
+            label="Primeiro nome"
+            variant="outlined"
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, Telefone: event.currentTarget.value });
+            }}
+            value={form.Telefone}
+            id="outlined-basic"
+            label="Telefone"
+            variant="outlined"
+            style={{ marginTop: 24, width: 260 }}
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, Genero: event.currentTarget.value });
+            }}
+            value={form.Genero}
+            id="outlined-basic"
+            label="Gênero"
+            variant="outlined"
+            style={{ marginTop: 24 }}
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, Email: event.currentTarget.value });
+            }}
+            value={form.Email}
+            id="outlined-basic"
+            label="Email"
+            variant="outlined"
+            style={{ marginTop: 24 }}
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, Senha: event.currentTarget.value });
+            }}
+            value={form.Senha}
+            id="outlined-basic"
+            label="Confirme seu email"
+            variant="outlined"
+            style={{ marginTop: 24 }}
+          />
+        </div>
+        <div style={{ display: "flex", flexDirection: "column" }}>
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, Sobrenome: event.currentTarget.value });
+            }}
+            value={form.Sobrenome}
+            id="outlined-basic"
+            label="Sobrenome"
+            variant="outlined"
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, CPF: event.currentTarget.value });
+            }}
+            value={form.CPF}
+            id="outlined-basic"
+            label="CPF"
+            variant="outlined"
+            style={{ marginTop: 24, width: 260 }}
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, AreaAtuacao: event.currentTarget.value });
+            }}
+            value={form.AreaAtuacao}
+            id="outlined-basic"
+            label="Área de atuação"
+            variant="outlined"
+            style={{ marginTop: 24 }}
+          />
+          <TextField
+            onChange={(event) => {
+              setForm({ ...form, CRM: event.currentTarget.value });
+            }}
+            value={form.CRM}
+            id="outlined-basic"
+            label="CRM"
+            variant="outlined"
+            style={{ marginTop: 24 }}
+          />
+        </div>
+        <div style={{ marginTop: 80 }}></div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <TextField
-          id="outlined-basic"
-          label="Primeiro nome"
-          variant="outlined"
-        />
-        <TextField
-          id="outlined-basic"
-          label="Sobrenome"
-          variant="outlined"
-          style={{ marginTop: 24, width: 260 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="CPF"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Área de atuação"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Confirme seu email"
-          variant="outlined"
-          style={{ marginTop: 24 }}
-        />
+      <div style={{ marginTop: 80 }}>
+        <Button
+          onClick={() => {
+            mutation.mutate();
+          }}
+          variant="contained"
+          style={{
+            backgroundColor: "#ECECEC",
+            width: 300,
+            height: 50,
+            color: "black",
+          }}
+        >
+          CRIAR CONTA
+        </Button>
       </div>
     </div>
   );
@@ -204,19 +259,6 @@ const Home: NextPage = () => {
             }}
           >
             <Form />
-            <div style={{ marginTop: 80 }}>
-              <Button
-                variant="contained"
-                style={{
-                  backgroundColor: "#ECECEC",
-                  width: 300,
-                  height: 50,
-                  color: "black",
-                }}
-              >
-                CRIAR CONTA
-              </Button>
-            </div>
           </div>
         </div>
       </div>
