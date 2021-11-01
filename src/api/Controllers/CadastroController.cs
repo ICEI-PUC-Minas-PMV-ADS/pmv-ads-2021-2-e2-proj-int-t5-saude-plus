@@ -25,7 +25,7 @@ namespace MyCadastro.Controllers {
        public async Task<IActionResult> PostCadastro(Cadastro Cadastro){
            _appDbContext.Cadastros.Add(Cadastro);
            await _appDbContext.SaveChangesAsync();
-           return Ok(new {success = true, data = Cadastro});
+           return Ok(new {success = true, data = await _appDbContext.Cadastros.ToListAsync()});
        }
     }
 }
