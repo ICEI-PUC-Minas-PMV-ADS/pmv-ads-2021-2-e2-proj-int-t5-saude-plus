@@ -1,12 +1,10 @@
 # Template Padrão da Aplicação
+Como é possível observar na imagem abaixo, o template padrão da aplicação apresenta quatro regiões distintas:
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Especificação do Projeto</a></span>, <a href="3-Projeto de Interface.md"> Projeto de Interface</a>, <a href="4-Metodologia.md"> Metodologia</a>
+- **Header:** É o cabeçalho da página. É fixo e idêntico em todas as telas. Nele constam o logo da empresa _Saude+_, um menu de navegação, no qual o usuário poderá acessar as telas com suas funcionalidades. A única excessão é a Homepage, que só mostra todos os botões do menu do Header após a autenticação do usuário no sistema.
 
-Layout padrão da aplicação que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
+- **Main Content:** É o conteúdo principal da tela. Tal coneúdo muda de acordo com a tela e suas respectivas funcionalidades.
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+- **Footer:** É o rodapé das telas que, no caso do sistema do Saude+, é fixo e invariável.
+
+![image](https://user-images.githubusercontent.com/65242472/139753745-119b1978-90c2-4788-a597-347a501cc0ab.png)
